@@ -18,10 +18,11 @@ function Chat() {
 
     useEffect(() => {
         if(roomId){
-            db.collection('rooms').doc(roomId)
-            .onSnapshot(snapshot => (
+            db.collection("rooms").doc(roomId).onSnapshot((snapshot) => 
                 setRoomName(snapshot.data().name)
-            ))
+                
+            );
+            
         }
     },[roomId])
 
