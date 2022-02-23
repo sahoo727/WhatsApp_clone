@@ -5,10 +5,12 @@ import Chat from "./Chat";
 // import { Routes } from "@mui/material";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Login from "./Login";
+import { useStateValue } from "./SateProvider";
 
 
 function App() {
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
+  const [{user}, dispatch] = useStateValue();
 
   return (
     <div className="app">
